@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/fragmentPertama">
+
+    <fragment
+        android:id="@+id/fragmentPertama"
+        android:name="com.saddam.mynavigationcomponent.fragment.FragmentPertama"
+        android:label="fragment_pertama"
+        tools:layout="@layout/fragment_pertama" >
+        <action
+            android:id="@+id/action_fragmentPertama_to_fragmentKedua"
+            app:destination="@id/fragmentKedua" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentKedua"
+        android:name="com.saddam.mynavigationcomponent.fragment.FragmentKedua"
+        android:label="fragment_kedua"
+        tools:layout="@layout/fragment_kedua" >
+        <action
+            android:id="@+id/action_fragmentKedua_to_fragmentKetiga"
+            app:destination="@id/fragmentKetiga" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentKetiga"
+        android:name="com.saddam.mynavigationcomponent.fragment.FragmentKetiga"
+        android:label="fragment_ketiga"
+        tools:layout="@layout/fragment_ketiga" >
+        <argument
+            android:name="name"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="Namanya Kosong" />
+    </fragment>
+</navigation>
