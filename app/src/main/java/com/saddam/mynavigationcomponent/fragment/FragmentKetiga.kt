@@ -23,12 +23,13 @@ class FragmentKetiga : Fragment() {
         return binding.root
     }
 
+    // fungsi onviewcreated untuk menampilkan nama yang ditulis di fragment sebelumnya
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val aName = FragmentKetigaArgs.fromBundle(arguments as Bundle).name
 
-        binding.tvName.text = "Namanya: $aName"
+        binding.tvName.text = "Kimi no Namaewa: $aName"
     }
 
     override fun onDestroy() {
